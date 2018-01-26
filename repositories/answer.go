@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"github.com/gugadev/triviago/database"
+	"github.com/gugadev/triviago/database" // nolint: gotype
 	"github.com/gugadev/triviago/models"
 )
 

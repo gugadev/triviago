@@ -6,18 +6,25 @@ import (
 	"github.com/gugadev/triviago/responses"
 )
 
+// ScoreRepo repository for score
 type ScoreRepo struct{}
 
+/*
+Insert insert a new score
+*/
 func (r *ScoreRepo) Insert(score models.Score) {
 	db := database.Connect()
-	defer db.Close()
+	defer db.Close() // nolint: gas,errcheck
 
 	db.Create(&score)
 }
 
+/*
+GetStats get stats from database
+*/
 func (r *ScoreRepo) GetStats() []responses.Stat {
 	db := database.Connect()
-	defer db.Close()
+	defer db.Close() // nolint: gas,errcheck
 
 	stats := []responses.Stat{}
 
