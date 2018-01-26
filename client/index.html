@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriviaGo</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: url('/static/img/bg.jpg') no-repeat;
+        }
+        .screenfade-enter-active, .screenfade-leave-active {
+            transition-property: opacity;
+            transition-duration: .5s;
+        }
+        .screenfade-enter-active {
+            transition-delay: .5s;
+        }
+        .screenfade-enter, .screenfade-leave-active {
+            opacity: 0
+        }
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity .5s;
+        }
+        .fade-enter, .fade-leave-to {
+            opacity: 0;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script defer src="/static/js/bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+</body>
+</html>
