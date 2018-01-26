@@ -6,7 +6,7 @@ module.exports = {
         bundle: './src/main.js',
     },
     output: {
-        path: join(__dirname, './public'),
+        path: join(__dirname, '..', 'public'),
         filename: 'js/[name].js',
     },
     module: {
