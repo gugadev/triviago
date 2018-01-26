@@ -53,11 +53,11 @@ module.exports = {
             Promise: 'imports-loader?this=>global!exports-loader?global.Promise!es6-promise',
         }),
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development'),
+            'process.env.NODE_ENV': JSON.stringify('production'),
         }),
-        /* new webpack.optimize.UglifyJsPlugin({
+        new webpack.optimize.UglifyJsPlugin({
             compress: true,
-        }), */
+        }),
     ],
     devtool: 'source-map',
     stats: { colors: true },
