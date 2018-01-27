@@ -5,3 +5,6 @@ vendor/
 .DS_Store
 
 *.db
+
+triviago
+triviago.exe
