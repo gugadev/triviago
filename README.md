@@ -1,7 +1,7 @@
 <h1 align="center">TriviaGo</h1>
 
 <p align="center">
-  <img height="450" src="https://i.imgur.com/UaLTr5G.png" />
+  <img height="450" src="https://i.imgur.com/jYw677G.png" />
 </p>
 <p align="center">
   <img height="450" src="https://i.imgur.com/XybxoON.png" />
