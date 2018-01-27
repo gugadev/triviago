@@ -3,7 +3,6 @@ package repositories
 import (
 	"github.com/gugadev/triviago/database"
 	"github.com/gugadev/triviago/models"
-	"github.com/jinzhu/gorm"
 )
 
 // QuestionRepo repository for Question
@@ -31,7 +30,7 @@ func (r *QuestionRepo) Get(categories []int) models.Question {
 
 	var question models.Question
 
-	db.Where("category_id IN(?)", categories).Order(gorm.Expr("random()")).Limit(1).Find(&question)
+	db.Where("category_id IN(?)", categories).Order("random()").Limit(1).Find(&question)
 	return question
 }
 

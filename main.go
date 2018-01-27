@@ -2,19 +2,23 @@ package main
 
 import (
 	"io/ioutil"
+	"net/http"
 
 	"github.com/gugadev/triviago/handlers" // nolint: gotype
-	"github.com/gugadev/triviago/setup"    // nolint: gotype
+	// nolint: gotype
+	"github.com/gobuffalo/packr"
 	"github.com/labstack/echo"
 )
 
 func main() {
-	setup.Migrate()
-	setup.Populate()
+	// setup.Migrate()
+	// setup.Populate()
 
 	app := echo.New()
 
-	app.Static("/static", "client/public")
+	assetHandler := http.FileServer(packr.NewBox("./public"))
+
+	app.GET("/static/*", echo.WrapHandler(http.StripPrefix("/static", assetHandler)))
 
 	app.GET("/api/categories", handlers.GetCategories)
 	app.GET("/api/questions", handlers.GiveQuestion)
