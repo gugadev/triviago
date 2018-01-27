@@ -53,7 +53,7 @@
     }
     .cat span {
         color: rgba(255,255,255,.85);
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Luckiest Guy', sans-serif;
         font-size: 14px;
         font-weight: 600;
         transition: color .25s ease;
